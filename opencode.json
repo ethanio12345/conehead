@@ -1,0 +1,19 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "conehead-orchestrator",
+  "instructions": [
+    ".opencode/rules/context/**/*.md"
+  ],
+  "agent": {
+    "conehead-orchestrator": {
+      "mode": "primary"
+    }
+  },
+  "command": {
+    "conehead": {
+      "description": "Main command for conehead project — routes to orchestrator which dispatches to specialist agents (physics-verifier, dose-engine-dev, cython-optimizer, dicom-specialist, test-author)",
+      "agent": "conehead-orchestrator",
+      "template": "conehead"
+    }
+  }
+}
